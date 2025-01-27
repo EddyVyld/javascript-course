@@ -154,17 +154,32 @@ console.log (costoTotal);
   - parseInt y parseFloat realiza la conversión hasta encontrar un caracter no numérico
 */
 
-console.log(Number ("68.58"))
 
 console.log( Number("68.58") ); // 68.58
 console.log( parseInt("68.58") ); // 68
+
 console.log( parseFloat("68.58") ); // 68.58
 console.log( Number("68.58 dolares") ); // NaN
 console.log( parseInt("68.58 dolares") ); // 68
+
 console.log( parseFloat("68.58 dolares") ); // 65.58
 console.log( Number("$68.58 dolares") ); // NaN
 console.log( parseInt("$68.58 dolares") ); // NaN
+
 console.log( parseFloat("$68.58 dolares") ); // NaN
+console.log( Number("68-58") ); // NaN
+console.log( parseInt("68-58") ); // 68
+
+console.log( parseFloat("68-58") ); // 68
+console.log( Number( true ) ); // 1
+console.log( Number( false ) ); // 0
+
+console.log( Number( [] ) ); // 0
+console.log( Number( [30] ) ); // 30
+console.log( Number( [30,40] ) ); // NaN
+
+
+
 
 
 
