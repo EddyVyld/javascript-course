@@ -94,6 +94,87 @@ console.log( `Resultado de myBigInt + 4n: ${ myBigInt + 4n }  `); //900719925474
 console.log( `Resultado de myBigInt + 5n: ${ myBigInt + 5n }  `); //9007199254740996
 console.log( `Resultado de myBigInt + 6n: ${ myBigInt + 6n }  `); //9007199254740997
 
+//Una variable es declarada, pero sin asignarle un valor
+
+myAge = null; // intensionalmente se borra el tipo de dato
+// NO es correcto usar typeof con un dato null
+console.log(`Tipo de dato en myAge: ${typeof myAge }`); // object
+console.log(`myAge es null?  ${ myAge === null } `);// true
+/*
+Tipo de dato boolean
+Tiene dos estados: true y false
+*/
+const isActive = true;
+console.log( typeof isActive ); // boolean
+
+
+/* 
+Conversion de datos (type casting)
+
+el type casting es eel acto de compartir variables de un tipo de dato a otro. Esto puede ser implicito (automatico) o explicito (forzado por el desarrollador)
+
+*/
+
+// Conversion implicita
+const resultado = "5" + 2; //"52" Numero convertido a String
+const multiplicacion =  "5" * 3; // 15 El string convertido a number 
+const division = "two" * 6; //NaN
+
+
+// Conversion explicita de datos (coercion de tipo)
+const edadMascota = 10;
+// Conversion explicita a string 
+
+
+console.log( String( true ) ); // "true"
+console.log( String( null ) ); // 
+console.log( String( undefined ) ); // "undefined"
+console.log( String( [] ) ); // empty Array-> ""
+console.log( String( [2,3,4,5,null,3] ) ); // "2,3,4,5,,3"
+
+// Conversion implicita a number
+const costo = "100"
+const costoIVA = costo * 1.16; // 116 conversion implicita de string a number
+
+// Conversion explicita a number
+const precioCroquetas = "2000";
+const precioJabon = "300.50";
+const precioVitaminas = "600.30";
+const costoTotal = precioCroquetas + precioJabon + precioVitaminas;
+console.log (costoTotal);
+
+
+/*
+ Number() Vs parseInt() y parseFloat()
+  - Number convierte enteros y decimales
+  - Number devuelve NaN si la cadena contiene algún caracter no numérico
+  - Con parseInt y parseFloat, si la entrada comienza con un valor no numérico devuelve NaN
+  - parseInt convierte solo pa parte entera
+  - parseFloat convierte la parte entera y decimales
+  - parseInt y parseFloat realiza la conversión hasta encontrar un caracter no numérico
+*/
+
+console.log(Number ("68.58"))
+
+console.log( Number("68.58") ); // 68.58
+console.log( parseInt("68.58") ); // 68
+console.log( parseFloat("68.58") ); // 68.58
+console.log( Number("68.58 dolares") ); // NaN
+console.log( parseInt("68.58 dolares") ); // 68
+console.log( parseFloat("68.58 dolares") ); // 65.58
+console.log( Number("$68.58 dolares") ); // NaN
+console.log( parseInt("$68.58 dolares") ); // NaN
+console.log( parseFloat("$68.58 dolares") ); // NaN
+
+
+
+
+
+
+
+
+
+
 
 
 
