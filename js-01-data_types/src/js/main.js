@@ -103,8 +103,7 @@ console.log( `Resultado de myBigInt + 6n: ${ myBigInt + 6n }`); // 9007199254740
 
 /*
  Tipo de dato undefined
-  - Una variable que es declarada, pero el tipo de datos
-   no es definido.
+  - Una variable que es declarada, pero no se le asigna un valor
 */
 
 let myName;

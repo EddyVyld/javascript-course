@@ -199,4 +199,82 @@ imprimerMensajeConCallback("Hola Eddy", mensajeConsola);
 imprimerMensajeConCallback("Hola Eddy", mensajeTitulo);
 
 
+// Me retorna un mensaje y luego el string
+// Console.log solo imprime en consola, no puede imprimir lo de consola, por eso es undefined y no tiene retorno
+console.log(console.log("Hola Pipi"))
 
+
+/*
+Pase por referencia - Pasar un valor a otra variable
+Pase por valor - Reasignacion un valor a una variable
+*/
+
+// Pase por valor
+
+let colorPintura = "rojo";
+function cambiarColorPintura(color){
+  console.log(`El color que llega a la función es ${color}`); // rojo
+    color = "azul";
+    console.log(`El color de la pintura que imprime la función es ${color}`); // azul
+}
+cambiarColorPintura(colorPintura);
+console.log(`El color de la pintura final es ${colorPintura}`); // rojo
+
+
+// Pase por referencia
+
+const colores = ["rojo", "azul", "verde"]; // Esto es la referencia (solo aplica en objetos)
+function cambiarColorArreglo(arreglo){
+  console.log(`El arreglo que llega a la función es ${arreglo}`); // "rojo", "azul", "verde"
+  arreglo[0] = "negro";
+  console.log(`Se imprimen los colores en la función: ${arreglo}`); // "negro", "azul", "verde"
+}
+cambiarColorArreglo( colores );
+console.log(`Los colores finales dentro del arreglo son: ${colores}`); // "negro", "azul", "verde"
+
+
+// Para ordenar tenemos el metodo sort (Tener en cuenta que ordena en Unicode)
+
+const series = ["Winnie", "Arnold", "avengers" ,"Atreve", "Digimon", "Naruto"];
+console.log( series.sort() ); // ['Arnold', 'Atreve', 'Digimon', 'Naruto', 'Winnie', 'avengers']
+
+
+// Con los numeros toma en cuanta el primer digito
+const numeros = [ 122, 2, 1, 55]; 
+console.log( numeros.sort() ); // [1, 122, 2, 55]
+
+
+// Pero si queremos que vaya de menor a mayor primero hacemos funcion de comparacion
+const ordenarNumeros = ( numA, numB) => {
+  if( numA < numB ){
+     return -1; // numA va antes que numB
+  } else if( numA > numB ) {
+     return 1; // numA va después que numB
+  } else { // Los números son iguales
+    return 0
+  }
+}
+console.log( ordenarNumeros( 3,6 ) ); // -1
+console.log( ordenarNumeros( 6,3 ) ); // 1
+console.log( ordenarNumeros( 3,3 ) ); // 0
+
+const numbers = [1, 10, 3, 100, 5];
+console.log(numbers.sort(ordenarNumeros)) //  [1, 3, 5, 10, 100]
+//  [1,10     3,100,5];
+//  [1,3     10,100,5];
+//  [1,3,10,100   ,5 ];
+//  [1,3,10,5,   100 ];
+//  ... después de repetir las iteraciones nuevamente
+//  [1,3,5,10,,100 ];
+
+// Lo mismo sin hacer ciclo for y mas facil
+const ordenarNumerosSimplificado = ( numA, numB) => numA - numB;
+const otrosNumeros = [  1,   10,   3,   100,   5];
+console.log( otrosNumeros.sort( ordenarNumerosSimplificado ) ); //  [1, 3, 5, 10, 100]
+
+const numerosDeLaSuerte = [  7,   21,   14,   28,   35];
+console.log( numerosDeLaSuerte.sort( (a,b)=> a-b ) );
+
+
+const numCH50 = [  19,   15,   13,   18,   5];
+console.log( numCH50.sort( (a,b)=> b-a ) );
