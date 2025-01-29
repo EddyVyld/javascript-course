@@ -152,5 +152,51 @@ console.log(nombreCohorte("Eddy", "CH50"))
 console.log(parseInt("faba")) //NaN
 console.log(parseInt("faba", 10)) //NaN
 
+// base decimal(10 dígitos): 0,1,2,3,4,5,6,7,8,9
+// base hexadecimal(16 dígitos): 0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F
+// base octal(8 dígitos): 0,1,2,3,4,5,6,7
+// base binaria(2 dígitos): 0,1
+console.log( parseInt("faba", 16) ); // 64186 valor decimal de la base hexadecimal
+
+
+/*
+ ------------ Funciones de Callback -----------------------
+ Es una función(definida, expresada, arrow, anónima) que se pasa 
+ a otra función como argumento.
+ Se pasa en el argumento como referencia ( sin parentesis).
+ */
+
+ // Arrow function que reciba un parámetro y lo imprima en consola
+ const mensajeConsola = mensaje => console.log(mensaje);
+ // Arrow function que reciba un parámetro y lo imprima con alert
+ const mensajeAlert = mensaje => alert(mensaje);
+
+ const mensajeTitulo = mensaje => document.getElementById("title").innerText = mensaje;
+
+ /**
+  * Función que imprima en consola o alert un mensaje.
+  * @param {string} mensaje mensaje a imprimir
+  * @param {string} opcion "consola" o "alert" el destino a imprimir 
+  */
+
+ const imprimirMensaje = (mensaje, opcion) => {
+    if (opcion === "consola") {
+        console.log(mensaje);
+    } else if (opcion === "alert") {
+        alert(mensaje);
+    } else if (opcion === "titulo") {
+        mensajeTitulo(mensaje);
+    } 
+}
+
+imprimirMensaje("Hola Eddy", "alert");
+imprimirMensaje("Hola Kati", "titulo");
+
+// Usar función de callback del ejercicio anterior (Hace lo mismo que hice en todo el ejercicio anterior mas facil)
+const imprimerMensajeConCallback = (mensaje, funcionCallback ) => funcionCallback( mensaje );
+
+imprimerMensajeConCallback("Hola Eddy", mensajeConsola);
+imprimerMensajeConCallback("Hola Eddy", mensajeTitulo);
+
 
 
