@@ -33,9 +33,43 @@ const eliminarPastel = ( array, indice ) => {
     const copyarray = array.slice();
     const pastelEliminado = copyarray.splice(indice, 1);
     console.log( copyarray ); // ["Pastel de Chocolate", "Pastel de Limón"]
-    //return pastelEliminado;
+    return pastelEliminado;
 }
 eliminarPastel( pasteles, 1 ); 
-console.log( pasteles ); // ["Pastel de Chocolate", "Pastel de Limón"]
+console.log( pasteles ); 
 
+// ============ Iterar un  arreglo con for loop ============
+/*
+ Sintaxis:
+    for (let i = 0; i < array.length; i++) {
+        console.log(array[i]);
+    }
+*/
+const nombres = ["Juan", "Pedro", "María", "Ana"];
+for ( let index = 0; index < nombres.length; index++ ){
+    console.log( nombres[index] ); // Juan, Pedro, María, Ana
+}
+console.log( "Me muestro en consola, muchas veces?" ); // Se muestra una vez en la consola
 
+// ============ Iterar un  arreglo y mostrar los elementos como una lista ============
+const gelatinas = ["Fresa", "Limon", "Naranja", "Uva"];
+const gelatinasLista = [];
+for ( let index = 0; index < gelatinas.length; index++ ) {
+    gelatinasLista.push(`<li> ${ gelatinas[index] } </li>`);
+}
+console.log( gelatinasLista ); 
+/* 
+  [
+   "<li> Fresa </li>", 
+   "<li> Limon </li>", 
+   "<li> Naranja </li>", 
+   "<li> Uva </li>"
+   ]
+*/
+const refGeletinasLista = document.getElementById("gelatina-lista");
+console.log(refGeletinasLista); 
+refGeletinasLista.innerHTML = gelatinasLista.join("");
+
+//InnerText me lo pasa como texto
+//InnerHTML para etiquetas 
+// Me va a salir una coma porque cuando convertimos string los array me salen con coma, para quitarlo hay que que poner .join
