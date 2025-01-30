@@ -88,7 +88,7 @@ console.log(devuelveTem(15))
   }
 */
 
-temperatura = 22
+temperatura = 19
 
 switch (temperatura) {
     case 22:
@@ -153,7 +153,7 @@ const velocidadVentilador = velocidad =>{
             mensaje = "Velocidad desconocida";
             break; 
     } return mensaje;
-};
+}; 
 
 
 // Ejercicio con if
@@ -193,16 +193,13 @@ if ( pagoTarjetaCredito ){
 
 // Operador ternario
 
-
-
-
 function edad (numEdad) { 
     return numEdad >= 18 ? "Eres mayor de edad" : "Eres manor de edad" 
  }
 
 console.log (edad(27))
 
-const edad1 = (numEdad1) >= numEdad1 >= 18 ? "Eres mayor de edad" : "Eres menor de edad";
+const edad1 = (numEdad1) => (numEdad1 >= 18) ? "Eres mayor de edad" : "Eres menor de edad";
 console.log (edad1(16))
 
 
@@ -217,6 +214,64 @@ console.log (edad1(16))
  mes  9, 10, 11 = otoño 
  Realizar una versión con if-else-elseif y otra con switch.
 */
+
+// Ejercicio con if-else-elseif
+
+
+let mes = Number(prompt("Dame un número de mes (1-12)"));
+
+const numeroMes = mes => {
+    if (mes === 1 || mes === 2 || mes === 12) {
+        alert (`Es invierno`);
+    } else if (mes >= 3 || mes <= 5) {
+        alert (`Es primavera`);
+    } else if (mes >= 6 || mes <= 8) {
+        alert (`Es verano`);
+    } else if (mes >= 9 || mes <= 11) {
+        alert (`Es otoño`);
+    } else {
+        alert (`El numero de mes que usted marco es invalido`);
+    }
+}
+
+// numeroMes (mes); 
+
+// Ejercicio con switch
+/* let mes1 = Number(prompt("Dame un número de mes (1-12)"));
+
+const numeroMes1 = mes1 => {
+    switch (mes) {
+        case 1:
+        case 2:
+        case 12:
+            console.log(`Es invierno`);
+            break;
+        case 3:
+        case 4:
+        case 5:
+            console.log(`Es primavera`);
+            break;
+        case 6:
+        case 7:
+        case 8:
+            console.log(`Es verano`);
+            break;
+        case 9:
+        case 10:
+        case 11:
+            console.log(`Es otoño`);
+            break;
+        default:
+            console.log(`El numero de mes que usted marco es invalido`);
+            break;
+    }
+}
+
+numeroMes (mes);  */
+ 
+
+
+
 
 
 
