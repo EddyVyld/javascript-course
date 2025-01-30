@@ -35,7 +35,7 @@
     else condición;   
 */
 
-const teperatura = 30
+let teperatura = 30
 
 /**
  * Función que recibe la temeperatura y devuelve un mensaje:
@@ -47,7 +47,7 @@ const teperatura = 30
  * @returns {string} mensaje
  */
 
-function dameT (temperatura) {
+function devuelveTem (temperatura) {
 if (temperatura === 22) {
     return `La temperatura de ${temperatura} grados es ideal`;
 } else if (temperatura <= 15) { 
@@ -59,5 +59,164 @@ if (temperatura === 22) {
 }
 }
 
-console.log(dameT(teperatura))
+console.log(devuelveTem(teperatura))
+console.log(devuelveTem(15))
+
+
+//--------------- Condicional Switch --------------------------
+/*
+ La condicional Switch evalua una expresión y se compara
+ con el valor de cada instancia en 'case' y se ejecuta las
+ sentencias asociadas a ese 'case' hasta encontrar
+ la sentencia 'break' o se finalicen todas las sentencias
+ de la condicional switch.
+ Para comparar la condicional switch usa el operador estricto ===
+ Sintaxis:
+  switch (expresión) {
+    case valor1:
+        sentencia;
+        break;
+    case valor 2:
+        sentencias;
+        break;
+    case valor n:
+        sentencias;
+        break
+    default:
+        sentencias;
+        break;
+  }
+*/
+
+temperatura = 22
+
+switch (temperatura) {
+    case 22:
+        console.log(`La temperatura de ${temperatura}🌡️ es ideal 😊👌.`);
+        break;
+    case 15:
+        console.log("estoy en 15 grados");
+    case 16:
+        console.log("estoy en 16 grados");
+    case 17:
+        console.log("estoy en 17 grados");
+    case 18:
+        console.log("estoy en 18 grados");
+    case 19:
+        console.log("estoy en 19 grados");
+    case 20:
+        console.log("estoy en 20 grados");
+    case 21:
+        console.log(`La temperatura de ${temperatura}° es fresca.`);
+        break;
+    case 13:
+    case 14:
+        console.log(`La temperatura de ${temperatura}° es fria 🥶.`);
+        break;
+    default:
+        console.log(`La temperatura de ${temperatura}° es calurosa y le gustaría a Nan.`);
+        break;
+}
+
+// default en caso de que no se cumplan los demas casos, se pueden poner desde el principio
+
+/**
+ * Función que reciba la velocidad de un ventilador y devuelva el mensaje
+ * de la velocidad del ventilador en:
+ * Velocidad 0: Apagado
+ * Velocidad 1: Baja
+ * Velocidad 2: Media
+ * Velocidad 3: Alta
+ * Cualquier otro valor: Velocidad desconocida
+ * @param {number} velocidad
+ * @returns {string} mensaje
+ */
+
+// Ejercicio con Switch
+let velocidad1 = 2;
+const velocidadVentilador = velocidad =>{
+    let mensaje;
+    switch (velocidad){
+        case 0:
+            mensaje = "Apagado";
+            break;
+        case 1:
+            mensaje ="Baja"
+            break;
+        case 2:
+            mensaje = "Media";
+            break;
+        case 3:
+            mensaje = "Alta";
+            break;
+        default:
+            mensaje = "Velocidad desconocida";
+            break; 
+    } return mensaje;
+};
+
+
+// Ejercicio con if
+const velocidad2 = 0
+function ventilador (velocidad2) {
+    if (velocidad2 === 0) {
+        return "Apagado";
+    } else if (velocidad2 === 1) {
+        return "Baja";
+    } else if (velocidad2 === 2){
+        return "media";
+    } else if (velocidad2 === 3){
+        return "Alta";
+    } else {
+        return "Velocidad desconocida";
+    } 
+}
+
+console.log(ventilador(velocidad2))
+
+
+// ------------------------ Operador ternario --------------------------
+/*
+ Es el único operador de JavaScript que tiene 3 operandos.
+ Generalmente se utiliza como opción a la sentencia if-else.
+ Sintaxis:
+  condición ? expresiónSiCondiciónEsVerdadera : expresionSiCondiciónEsFalsa; 
+*/
+
+const pagoTarjetaCredito = true;
+let msj;
+if ( pagoTarjetaCredito ){
+    msj = "A realizado el pago de su TC";
+}else {
+    msj = "No ha realizado el pago de su TC";
+}
+
+// Operador ternario
+
+
+
+
+function edad (numEdad) { 
+    return numEdad >= 18 ? "Eres mayor de edad" : "Eres manor de edad" 
+ }
+
+console.log (edad(27))
+
+const edad1 = (numEdad1) >= numEdad1 >= 18 ? "Eres mayor de edad" : "Eres menor de edad";
+console.log (edad1(16))
+
+
+
+// ------------------- Ejercicio Estaciones del año --------------------------
+/*
+ Preguntar por el número de mes (prompt o DOM), del 1 al 12
+ Desplegar de acuerdo al mes un Alert (mostrarlo en el DOM) la estación del año.
+ mes 12,  1,  2 = invierno.
+ mes  3,  4,  5 = primavera
+ mes  6,  7,  8 = verano
+ mes  9, 10, 11 = otoño 
+ Realizar una versión con if-else-elseif y otra con switch.
+*/
+
+
 
