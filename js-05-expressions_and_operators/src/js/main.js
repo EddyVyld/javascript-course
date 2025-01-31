@@ -92,4 +92,48 @@ console.log( "hola" == "Hola" ); // false
 
 console.log( 'Hola "Ch50" ' == 'Hola "Ch50" ' ); 
 console.log( "Hola \"Ch50\" " == "Hola \"Ch50\" " ); 
+
 console.log("Primer línea, \nsegunda línea, \n\ttercer línea");
+
+// Se recomienda usar el método localCompare(): compara cadenas de texto de acuerdo con las reglas de un idioma específico
+console.log("apple".localeCompare("banana")); // -1 (porque "apple" < "banana")
+console.log("grape".localeCompare("grape"));  // 0 (son iguales) 
+console.log("pear".localeCompare("orange"));  // 1 (porque "pear" > "orange")
+console.log("a".localeCompare("A", "en", { sensitivity: "base" })); // 0
+console.log( "a".localeCompare("A") ); //
+
+
+// Number: devuelve verdadero solo si ambos operandos tienen el mismo valor. 
+// +0 y -0 se tratan como el mismo valor. 
+// Si alguno de los operandos es NaN, devuelve falso.
+console.log(  +0 == -0 ); // true
+console.log(  NaN == NaN ); // false
+console.log(  1 == 1 ); // true
+console.log(  1 == 1.0 ); // true
+console.log(  1 == 1.1 ); // false
+console.log(  isNaN("hola" / 3 )  ); // true
+
+
+// ------- Operadores de asignación ----------------
+/*
+ Asigna un valor a su operador izquierdo basándose en el valor
+ de su operando derecho:
+
+ asignación =
+ 
+ Operadores abreviados ( compuestos ):
+  op1 += op2  -> op1 = op1 + op2
+  op1 -= op2  -> op1 = op1 - op2
+  op1 *= op2  -> op1 = op1 * op2
+*/
+
+let suma = 0;
+//Agregar 2 al valor de suma
+suma += 2
+
+let valorA = 15;
+valorA *=2
+
+let mensaje = "Me voy";
+mensaje += 2; 
+
