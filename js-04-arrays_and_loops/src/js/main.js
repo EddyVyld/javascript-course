@@ -151,3 +151,149 @@ for (let i = 1; i <= 7; i++ ){
 }
 
 
+
+
+ // ============ Ejercicio mental =============================
+ let myIteration;
+ for (myIteration = 0; myIteration <= 5; myIteration++) {
+     console.log("For loop", myIteration ); //  0...5
+    if ( myIteration === 3 ) break;
+ }
+ console.log("Final", myIteration); // 6
+
+ // Ejercicio 2
+
+ /* let myIteration;
+ for (myIteration = 0; myIteration <= 5; myIteration++) {
+     console.log("For loop", myIteration ); //  0
+    if ( myIteration <= 3 ) break; // 0
+ }
+ console.log("Final", myIteration); // 0
+
+ //  */
+
+ // ================ Function Scope ====================
+/*
+  Variables declaradas con var, let y const tienen un alcance de función. 
+  Esto significa que están limitadas al contexto de la función 
+  en la que se declaran.
+  Son sus limites dentro de la funcion 
+*/
+
+function functionScope(){
+    var myVar = 10;
+    let myLet = 20;
+    const myConst = 30;
+    console.log(myVar);
+    console.log(myLet);
+    console.log(myConst);
+    
+}
+functionScope();
+
+// console.log(myVar);
+// console.log(myLet);
+// console.log(myConst);
+
+// ================ Block Scope ====================
+/*
+  Variables declaradas con let y const tienen un alcance de bloque. 
+  Esto significa que están limitadas al bloque en el que se declaran.
+*/
+{
+    var a = "a";
+    let b = "b";
+    const c = "c"; 
+    console.log(a);
+    console.log(b);
+    console.log(c);
+}
+console.log(a);
+// console.log(b);
+// console.log(c);
+
+// ================ Hoisting =======================
+/*
+  El "hoisting" en JavaScript es un comportamiento que ocurre durante la fase de compilación antes de la ejecución del código. 
+  Se refiere a la elevación (movimiento) de las declaraciones 
+  de variables y funciones al inicio de su contexto de ejecución
+*/
+/*
+  Las variables declaradas con var son elevadas al inicio de su contexto de ejecución (ya sea el ámbito de función o el ámbito global).
+  
+  Sin embargo, solo la declaración de la variable es elevada, 
+  no la asignación. Esto significa que la variable existe, 
+  pero su valor es undefined hasta que llega a la línea de asignación.
+*/
+console.log(phone); // undefined
+var phone = "55-65-123-123";
+console.log(phone); // 55-65-123-123
+
+/*
+  Las variables declaradas con let y const también se elevan al 
+  inicio de su contexto, pero a diferencia de var, no se inicializan 
+  automáticamente con undefined. La fase de inicialización de estas 
+  variables no ocurre hasta llegar a la línea de código donde se declaran.
+*/
+
+for (let i = 0 ; i<= 5; i++){
+    if (i === 3) break;
+    console.log("Estoy dentro del ciclo for") // 0,1,2
+    console.log("Valor de i", i); 
+}
+
+for (let i = 0 ; i<= 5; i++){
+    if (i === 3) continue; // Omite el 3 
+    console.log("Estoy dentro del ciclo for") // 0,1,2
+    console.log("Valor de i", i); 
+}
+
+
+// break: rompe la iteración
+//continue: salta la iteración
+
+
+
+// ============== Ciclo While ======================
+//                (while loop)
+/*
+ Crea un bucle que ejecuta una sentencia mientras la condición especificada
+ se cumpla.
+ Sintaxis:
+    while( condición) sentencia;
+    while ( condición ){
+        sentencias;
+    }
+*/
+
+// Confirm nos va presentar dos botonos
+// Prompt nos ayuda  que aparezca mensaje
+// Alert para ve que va a decir
+
+/* while (confirm ("¿Quieres que te genere tu numero de la suerte?")){
+    // ramdom devuelve un numero aleatoria entre 0 (incluido) y 1 (Excluido)
+    console.log (`Tu numero de la suerte es ${ Math.random()}`);
+    // Numero aleatorio del 0 al 10 
+    console.log (`Tu numero de la suerte es ${ Math.random() * 10}`);
+    // Numero aleatorio del 1 al 10 
+    console.log (`Tu numero de la suerte es ${ (Math.random() * 10) + 1}`); // Asi ya no me da del 0 al 10 es 1 al 10
+    //Numero aleatorio entero de 1 al 10
+    console.log (`Tu numero de la suerte es ${ Math.floor((Math.random() * 10) + 1 )}`); 
+
+} */
+
+/*
+Math. ceil (decimal hacia arriba)
+Math.floor (decimal hacia abajo)
+Math.round (decimal a 1.5)
+Math.random (numero aleatorio)
+*/
+
+// Generar 100 números aleatorios en el rango de 1 al 50(incluyendo).
+// Ordenar e imprimir de manera descendente
+while (confirm ("¿Quieres que te genere un numero")){
+console.log (`Tu numero es ${ Math.round((Math.random() * 50) + 1 )}`); 
+}
+
+
+
