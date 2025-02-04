@@ -137,3 +137,162 @@ valorA *=2
 let mensaje = "Me voy";
 mensaje += 2; 
 
+
+let numero = 3;
+let dinero = -numero;
+console.log(numero, dinero); //3,-3
+
+//suma unitaria
+let pago = dinero
+console.log(pago)
+
+
+
+let intereses = "5.23"; //String
+console.log(5 + intereses); // Se concatena 
+console.log(5 + parseInt( intereses)); // Se concatena 
+
+let pagoFinal = 0;
+console.log( pagoFinal += 5 + + "3" ); // 8
+console.log( pagoFinal += 5 + parseInt("3")); // 8
+
+
+//Nota: Si un string-numero tiene un signo se vuelve number y se suma, sino se concatena
+
+
+// Operador de incremento y decremento en unidad.
+/*
+  Operador de pre-incremento y pre-decremento
+    ++ valor
+    -- valor
+  Operador de post-incremento y post-decremento
+    valor ++
+    valor --
+*/
+
+let number = 10;
+++ number; // 11 //number = number + 1
+console.log(number);
+number ++; // 12
+console.log (number)
+
+// Uso de preincremento
+number = 20
+console.log(number); 
+console.log(number = number + 1);
+
+// Uso de postincremento
+number = 20 
+// Aqui pasan dos cosas. Primero nos entrega la variable y luego en e siguilente console.log se suma uno
+console.log(number++); //20
+console.log(number);  //21
+
+// Uso de pre-incremento
+number = 40;
+console.log(number = number + 1 ); //41
+console.log(number); //41
+
+//++valor
+number = 40;
+console.log(++number);
+console.log(number)
+
+
+/* Nota: Si esta antes el ++ se suma, sino solo nos entrega el valor de la variable, y se ejecuta la suma hasta que lo volvamos a llamar*/
+
+
+// Ejercicio mental
+// ------------ Ejercicio Mental ---------------------
+let x = 3;
+let y = x++; // y:3   x:4
+console.log(`x :${ x++ } y:${ ++y }`); // x:4    y:4
+                                       // x:5
+console.log(`x :${ x } y:${ y }`); // x:5     y:4
+
+// Ejercicio 1
+let a = 0, b = 0;
+
+for ( ; a < 3; b = a++){
+  console.log(a, b);
+}
+console.log(a, b);
+
+// ------------ Ejercicio Mental 2---------------------
+a = 0, b = 0; // 
+for( ; a < 3 ; b = ++a){ // b=1 a=1, b=2 a=2, b=3 a=3
+  console.log( a , b ); 
+  // N.Iteración     a     b
+  //   1             0     0
+  //   2             1     1
+  //   3             2     2
+
+}
+console.log( a , b ); // 3, 3
+
+
+// =============Imprimir los valores de array ====================
+const numeros = [2,4,5,67,8];
+let indice = 0;
+while( indice < numeros.length  ){
+  console.log("Numero:" , numeros[indice ++] );
+  // indice = indice + 1;
+}
+
+
+/*
+ También son conocidos como operadores de corto circuito ( short-circuit operators ).
+
+ OP1 && OP2 Si OP1 es verdadero, se retorna la expresión de OP2.
+ OP1 || OP2 Si OP1 es verdadero, se retorna la expresión de OP1.
+
+  Se condisera false: "", 0, null, undefined, NaN
+*/
+
+console.log( true && false ); // false
+console.log( true && "Usando corto circuito ");// "Usando corto circuito"
+console.log( "false" && "Mi mente sigue de vacaciones");// "Mi mente sigue de vacaciones"
+console.log( 0 && "Chau, chau"); // 0
+console.log( "" && "Chau, chau"); // "" empty string
+console.log( false && "Chau, chau"); // false
+
+
+console.log( true || false ); // True
+console.log( true || "Usando corto circuito ");// True
+console.log( "false" || "Mi mente sigue de vacaciones");// "false"
+console.log( 0 || "Chau, chau"); // Chau, Chau
+console.log( "" || "Chau, chau"); // Chau Chau
+console.log( false || "Chau, chau"); // Chau Chau
+
+
+// ------------- casos prácticos -----------------------
+// console.log(   variableSinDeclarar ); // La variable no ha sido declarada
+console.log( true || variableSinDeclarar   ); 
+
+// -----------------------------------------------------
+let loggedIn = false;
+loggedIn && console.log("Bienvenido Usuario"); // false; NO se imprime en consola
+
+// Mostrar en consola "Acceso permitido" solo si la variable esAdmin = true
+
+esAdmin = true
+console.log(esAdmin && console.log("Acceso permitido"))
+
+
+/*  OP1 ?? OP2 si OP1 es null o undefined retorna la expresión de OP2 
+ OP1 ?? OP2 si OP2 es null o undefined retorna la expresión de OP1 */
+
+
+// ------------------ Ejercicio --------------------------
+/*
+  Imprimir en consola "Acceso Denegado" es la variable esAutorizado = true
+  En caso contrario imprimir "Acceso concedido".
+*/
+
+let esAutorizado = true;
+
+esAutorizado && console.log("Acceso concedido");
+esAutorizado || console.log("Acceso denegado");
+
+
+
+
