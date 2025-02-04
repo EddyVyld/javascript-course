@@ -291,9 +291,11 @@ Math.random (numero aleatorio)
 
 // Generar 100 números aleatorios en el rango de 1 al 50(incluyendo).
 // Ordenar e imprimir de manera descendente
+
+
 while (confirm ("¿Quieres que te genere un numero")){
-console.log (`Tu numero es ${ Math.round((Math.random() * 50) + 1 )}`); 
-}
+    console.log (`Tu numero es ${ Math.round((Math.random() * 100) + 1 ) / 2}`); 
+    }
 
 
 
