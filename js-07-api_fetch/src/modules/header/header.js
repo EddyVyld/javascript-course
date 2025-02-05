@@ -22,6 +22,9 @@ const insertMainHeader = ()=>{
                 <li class="nav-item">
                 <a class="nav-link" href="/src/pages/contact/contact.html">Contáctanos</a>
                 </li>
+                <li class="nav-item">
+                <a class="nav-link" href="/src/pages/register/register.html">Regístrate</a>
+                </li>
             </div>
         </div>
         </nav>
