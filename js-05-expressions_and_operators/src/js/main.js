@@ -293,6 +293,15 @@ let esAutorizado = true;
 esAutorizado && console.log("Acceso concedido");
 esAutorizado || console.log("Acceso denegado");
 
+esAutorizado ? console.log("Accseso denegado") : console.log("Acceso concedido");
 
+
+// Podemos reducirlo con: 
+
+let autorizado = true;
+let message = autorizado && "Acceso concedido" || "Acceso denegado";
+console.log( message );
+
+console.log( autorizado? "Acceso concedido":"Acceso denegado" );
 
 
