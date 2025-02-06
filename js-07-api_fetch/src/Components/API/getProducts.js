@@ -30,12 +30,13 @@ fetch(resource)
 .finally (callback) // Se ejecuta independientemente de que se cumpla o no la promesa
  */
 fetch (url)
-.then(resolve => {
-    console.log(resolve);
-    resolve.json()
+.then(resolve => resolve.json()) // Convierte de JSON a JS
+    /* resolve.json()  // Esto fue con el primer ejemplo 
         .then((productos) => console.log(productos))
-        .catch((error) => console.log(error)); // Convierte de JSON a objeto de JS
-} ) 
+        .catch((error) => console.log(error)); // Convierte de JSON a objeto de JS */
+
+   .then((productos) => console.log(productos))
+   // .catch((error) => console.log(error)); Lo puedo elimanr porque el de abajo funciona para lo mismo
 .catch(error => console.log(error))
 .finally ( ()=>console.log("Ha terminado")) 
 
