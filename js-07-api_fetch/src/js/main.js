@@ -61,7 +61,7 @@ const primerPaso = () => {
      setTimeout( ()=>{}  , tiempo_ms );
 */
 
-  const saludo = (nombre) => console.log(`hola ${nombre}, se te antoja un elote`)
+/*   const saludo = (nombre) => console.log(`hola ${nombre}, se te antoja un elote`)
 
   const usoDeSetTimeOut = (nombrePersona) => {
     setTimeout(saludo, 5000, nombrePersona);
@@ -70,7 +70,8 @@ const primerPaso = () => {
 
 console.log("01-Inicio de mi secuencia"); 1
 usoDeSetTimeOut("Patricio Estrella", "Dr.") 3
-console.log("03-Fin de mi secuencia"); 2
+console.log("03-Fin de mi secuencia"); 2 */
+
 
 
 
