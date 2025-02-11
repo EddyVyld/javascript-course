@@ -2,6 +2,7 @@ import { insertMainHeader } from "../../src/modules/header/header.js";
 import { insertMainFooter } from "../../src/modules/footer/footer.js";
 import { amdRadeonRx, mouseGamer } from "../modules/class/amd-radion-rx.js"; 
 import { Product } from "../modules/class/Product.js";
+import { Mouse } from "../modules/class/mouse.js";
 
 insertMainHeader();
 insertMainFooter();
@@ -70,3 +71,19 @@ mouseLogi.productName = "Ratoncito";
 console.log(mouseLogi.productName); 
 
 console.log( mouseLogi.printPrice() );
+
+
+
+// Usar la clase moueseMac
+
+const mouseMac = new Mouse("Mouse Mac", 1400, "Mac", 3000);
+console.log( mouseMac.printPrice () );
+
+// Generar un array de Mice
+    // Clase: Product     mouse    mouse
+const mice = [mouseLogi, mouseMac, new Mouse("m3",3,"N/A",1000) ];
+
+for (const mouse of mice) {
+    // Que metodo se va a utilizar 
+    console.log( mouse.card())
+}

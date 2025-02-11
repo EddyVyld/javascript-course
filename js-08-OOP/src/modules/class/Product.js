@@ -60,6 +60,12 @@ class Product {
         return `${this.#productName} cuesta ${this.#price}`;
       }
 
+      card() {
+        return `
+            <h2>${this.productName}</h2>
+            <p>Llévatelo por ${this.price}</p>
+        `
+      }
 
 }
 
@@ -77,5 +83,5 @@ export { Product };
 // Cuatro pilares para orientacion de objetos
 // Abstraccion: Una representacion de lo simple que encubre la complejidad subyacente.
 // Encapsulacion: La protección y ocultación de los atributos y métodos internos de un objeto, exponiendo solo lo necesario.
-// Polimorfismo: 
+// Polimorfismo: La capacidad de los objetos de diferentes clases de ser tratados como instancias de la misma clase
 // Herencia: El mecanismo mediante el cual las clases inferiores heredan atributos y comportamientos de las clases superiores, promoviendo la reutilización del código y la creación de jerarquías.

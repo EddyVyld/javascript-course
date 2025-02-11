@@ -18,4 +18,35 @@ class Mouse extends Product {
     // Velocidad de respuesta
     #dpi
 
+    constructor (productName, price, brand, dpi) { // Agregamos dpi
+        super(productName, price, brand) // Hace referencia a los atributos del otro constructor
+        this.#dpi = dpi
+    }
+
+    //Metodos setters y getters de dpi
+    set dpi( dpi ){
+        this.#dpi = dpi; 
+    }
+    
+    get dpi () {
+        return this.#dpi;
+    }
+
+
+    /* printPrice() {
+        return `${this.productName}`;
+      } */
+
+    // Sobreescritura de metodo 
+    card() {
+    return `
+        <h2>${this.productName}</h2>
+        <h2>${this.dpi}</h2>
+        <p>Llévatelo por ${this.price}</p>
+    `
+  }
+
 }
+
+
+export { Mouse };
