@@ -170,7 +170,7 @@ console.log( parseInt("faba", 16) ); // 64186 valor decimal de la base hexadecim
  const mensajeConsola = mensaje => console.log(mensaje);
  // Arrow function que reciba un parámetro y lo imprima con alert
  const mensajeAlert = mensaje => alert(mensaje);
-
+// Arrow function que busca dentro del documento html la clase y le imprime un mensaje
  const mensajeTitulo = mensaje => document.getElementById("title").innerText = mensaje;
 
  /**

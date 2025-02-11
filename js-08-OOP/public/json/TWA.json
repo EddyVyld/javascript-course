@@ -1,0 +1,34 @@
+ [
+      {
+        "id": 40,
+        "categoria": "Desarrollo Web",
+        "nombre": "Fundamentos de HTML, CSS y JavaScript",
+        "descripcion": "Aprende los principios básicos del desarrollo web y crea tus primeras páginas interactivas.",
+        "autor": "Laura González",
+        "duracion": 6,
+        "nivel": "Principiante",
+        "fecha_de_creacion": 1833732653024, 
+        "precio": "Gratis"
+      },
+      {
+        "id": 22,
+        "nombre": "Introducción a la Ciberseguridad para Mujeres",
+        "descripcion": "Descubre cómo proteger tu información personal y aprende los fundamentos de la ciberseguridad.",
+        "autor": "Ana Torres",
+        "duracion": 4,
+        "nivel": "Intermedio",
+        "fecha_de_creacion": 1833732653022, 
+        "precio": 50
+      },
+      {
+        "id": 101,
+        "categoria": "Inteligencia Artificial",
+        "nombre": "Machine Learning desde Cero",
+        "descripcion": "Un curso introductorio para comprender los conceptos básicos de la inteligencia artificial y el machine learning.",
+        "autor": "María Fernández",
+        "duracion": 8,
+        "nivel": "Intermedio",
+        "fecha_de_creacion": 1833732653023, 
+        "precio": "Gratis"
+      }
+    ]
