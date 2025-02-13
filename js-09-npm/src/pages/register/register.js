@@ -7,7 +7,7 @@ import { insertMainHeader } from "/src/modules/header/header";
 import { insertMainFooter } from "/src/modules/footer/footer";
 import { handlerRegister } from "./handlerRegister";
 
-window.addEventListener( "load", () => {
+window.addEventListener( "load", () => {  
     
     document.getElementById("app").innerHTML = `
     ${insertMainHeader()} 
