@@ -15,7 +15,8 @@ function App() {
         <img src="" alt="" />
       <Main />
 
-      <Footer />
+      {/* Ejemplo de como poner string y numero */}
+      <Footer year="2025" cohorte={50} />
 
       
     </>

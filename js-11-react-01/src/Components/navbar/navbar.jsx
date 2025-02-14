@@ -1,5 +1,18 @@
 
 
+/*   Las props (abreviación de "properties") son parámetros 
+ *   que se pasan de un componente padre a 
+ *   un componente hijo para personalizar su comportamiento 
+ *   o apariencia.
+ * 
+ *   Caracerísticas:
+ *   - Son de solo lectura (inmutables dentro del componente hijo).
+ *   - Se pueden pasar valores de cualquier tipo: strings, números,
+ *     arrays, objetos, funciones, etc
+ *   - Se pueden pasar funciones para que el componente hijo las ejecute.
+ */
+
+
 export const Navbar = (props) => {
 
     const cohorte = 50;
