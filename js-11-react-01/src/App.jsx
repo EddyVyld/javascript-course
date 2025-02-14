@@ -16,7 +16,7 @@ function App() {
       <Main />
 
       {/* Ejemplo de como poner string y numero */}
-      <Footer year="2025" cohorte={50} />
+      <Footer year="2025" cohorte={50} inlove={true} />
 
       
     </>
