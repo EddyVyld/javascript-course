@@ -1,5 +1,5 @@
 
-
+import { Link } from "react-router-dom";
 /*   Las props (abreviación de "properties") son parámetros 
  *   que se pasan de un componente padre a 
  *   un componente hijo para personalizar su comportamiento 
@@ -23,8 +23,8 @@ export const Navbar = (props) => {
         <h2>Cohorte {cohorte} </h2>
         <img src={props.src} alt={props.alt} /> Estoy leyendo a traves del archivo app los componentes del elemento navbar
         <ul>
-            <li>Inicio</li>
-            <li>Productos</li>
+            <li> <Link to="/"> Inicio </Link></li>
+            <li> <Link to="/counter"> Productos  </Link></li>
             <li>Contacto</li>
         </ul>
     </nav>

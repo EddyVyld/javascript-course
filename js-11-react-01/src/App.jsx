@@ -1,9 +1,10 @@
-
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css'
 import { Navbar } from './Components/navbar/navbar'
 import { Footer } from './Components/footer/footer'
 import { Main } from './Components/main/main'
-import {Counter} from './Components/counter/counter'
+import { Counter } from './Components/counter/counter'
+/* import { Contact } from './Components/Contact/contact' */
 
 
 function App() {
@@ -11,20 +12,20 @@ function App() {
   /* const [count, setCount] = useState(0) */
 
   return (
-    <> 
-      <Navbar src="/img/dinosaurio" alt="Dino programador" />
-        <img src="" alt="" />
-      <Main />
+    <BrowserRouter>
+      <Navbar src="/img/dinosaurio.jpg" alt="Dino programador" />
+      <Routes>
+        <Route path="/" element={<Main src="miProp" />} />
+        <Route path="/counter" element={<Counter />} />
+        <Route path="*" element={<h1>Error 404</h1>} />
 
-      <Counter />
-      <Counter />
+        {/* Este fue mi ejercicio */}
+       {/*  <Route path="/" element={<Contact src="miProp" />} /> */}
 
-      {/* Ejemplo de como poner string y numero */}
-      <Footer year="2025" cohorte={50} inlove={true} frase={true}  />
-
-      
-    </>
-  )
+      </Routes>
+      <Footer year="2025" cohorte={50} inLove={false} />
+    </BrowserRouter>
+  );
 }
 
 export default App;
